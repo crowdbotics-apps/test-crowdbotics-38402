@@ -75,6 +75,7 @@ LOCAL_APPS = [
     'users.apps.UsersConfig',
     'subscriptions.apps.SubscriptionsConfig',
     'apps.apps.AppsConfig',
+    'plans.apps.PlansConfig',
 ]
 THIRD_PARTY_APPS = [
     'rest_framework',
