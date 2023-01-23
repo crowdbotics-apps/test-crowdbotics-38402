@@ -11,7 +11,7 @@ from users.models import User
 
 class UserViewSet(viewsets.GenericViewSet):
     serializer_class = UserSerializer
-    authentication_classes = (authentication.TokenAuthentication,)
+    authentication_classes = (authentication.TokenAuthentication, authentication.SessionAuthentication)
     permission_classes = (IsAuthenticated,)
     queryset = User.objects.all()
 

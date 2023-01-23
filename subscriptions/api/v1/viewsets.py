@@ -17,7 +17,7 @@ class SubscriptionPaymentViewSet(viewsets.ViewSet):
 
 class SubscriptionViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = SubscriptionSerializer
-    authentication_classes = (authentication.TokenAuthentication,)
+    authentication_classes = (authentication.TokenAuthentication, authentication.SessionAuthentication)
     permission_classes = (IsAuthenticated,)
     queryset = Subscription.objects.all()
 
